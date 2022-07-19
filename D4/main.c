@@ -4,6 +4,8 @@
 #include "Console_IO_Utility.h"
 #include "File_Input_Utility.h"
 
+static const char filename[] = "gasstations.txt";
+
 typedef struct gasStation
    {
     char stationName[ 100 ];
@@ -15,20 +17,27 @@ typedef struct gasStation
 int main( int argc, char *argv[] )
    {
 
-        int counter;
+        //int counter = 0;
         char fileName[ 100 ];
-        
-
+        FILE *file = fopen(filename, "r");
+        char line;
         openInputFile(fileName);
+        line = fgetc(file);
 
-        while( !checkForInputFileOpen() )
+        printf("list of gas stations near NAU\n\n");
+        while(line != EOF)
         {
-            readIntegerFromFile();
+          printf("%c", line);
+          line = fgetc(file);
+        }
+        /*while( !checkForInputFileOpen() )
+        {
+            //readIntegerFromFile();
 
             counter++;
-        }
+        }*/
 
-        gasStationType gasStations[ counter ];
+        //gasStationType gasStation[ counter ];
 
 
 

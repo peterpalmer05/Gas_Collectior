@@ -13,7 +13,7 @@ Install gcc for your linux distro.
 ## running the tests
 
 Run "make -f d4_mf" into the terminal and after the executable is made, run
-"./d4" in terminal with you "gasstations.txt" in the same directory.
+"./d4" in terminal with your "gasstations.txt" in the same directory.
 
 # Deployment
 
@@ -42,3 +42,4 @@ Luke Domby
 This project is licensed under the GNU 3 License - see the LICENSE.md file for details.
 
 # Acknowledgments
+N/A

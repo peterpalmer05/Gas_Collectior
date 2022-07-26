@@ -5,12 +5,14 @@
 //in future use creating own gui will be needed, for now need to test tech
 static void print_example (GtkWidget *widget, gpointer   data)
 {
-	g_print ("\nclose\n closer\n closest\n");
+	g_print (" close\n closer\n closest\n");
 }
 
 static void print_example2 (GtkWidget *widget, gpointer   data)
 {
-	g_print ("\na\n b\n c\n");
+	g_print (" Circle K   3350 S Lake Mary Rd #9311  4.56 \n Speedway   101 E Butler Ave  4.66"
+	"	\n Mobil   2020 S Milton Rd  4.80\n Chevron   357 W Forest Meadows St  4.86"
+	"\n Shell   2325 S Woodlands Village Blvd  4.96\n");
 }
 
 static void activate (GtkApplication *app, gpointer user_data)
@@ -39,7 +41,7 @@ static void activate (GtkApplication *app, gpointer user_data)
 	gtk_grid_attach (GTK_GRID (displayGrid), button, 0, 0, 2, 1);
 
 	//same as before
-	button = gtk_button_new_with_label ("Display by Name");	
+	button = gtk_button_new_with_label ("Display by Price");	
 	
 	g_signal_connect (button, "clicked", G_CALLBACK (print_example2), NULL);
 

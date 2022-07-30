@@ -25,27 +25,29 @@ we didnt make a single main to work with and its haunting me*/
 
 static void activate (GtkApplication *app, gpointer user_data);
 
+void bubbleSortDist();
+
+void bubbleSortPrice();
+
+void clearMem();
+
+void clearMemHelper(int index);
+
+int countLines(char *fileName);
+
 static void print_example (GtkWidget *widget, gpointer   data);
 
 static void print_example2 (GtkWidget *widget, gpointer   data);
-
-int countLines(char *fileName);
 
 void storeData(char *fileName);
 
 void swapGasStation( int index1, int index2);
 
-void bubbleSortDist();
 
-void bubbleSortPrice();
-
-
+//hate doing this but I dont have time to figure out a better way
 gasStationType **gasStations;
 
 int arraySize;
-
-
-
 
 
 
@@ -61,19 +63,14 @@ int main( int argc, char *argv[] )
 	arraySize = countLines("gasStation.txt");
 	
 	gasStations = malloc(arraySize * sizeof(gasStationType));
+	//a constructor would be nice for this
 	for(index;index < arraySize; index++)
 	{
 		gasStations[index] = malloc(sizeof(gasStationType));
 	}
 	
-	
 	storeData(fileName);
-	/*for( int x = 0; x < arraySize; x++ )
-	{
-		//printf( "%.2f\n",gasStations[x].price );
-		printf("%s\n",gasStations[x].stationName);
-	}
-	*/
+
 	gas_collector = gtk_application_new ("com.github.LukeDomby", G_APPLICATION_FLAGS_NONE);
 	//should allow me to create a proof of concept
 	g_signal_connect (gas_collector, "activate", G_CALLBACK (activate), NULL);
@@ -82,35 +79,12 @@ int main( int argc, char *argv[] )
 	
 	g_object_unref (gas_collector);
 	
+	clearMem();
+	
     return 0;    
    }
    
-static void print_example (GtkWidget *widget, gpointer   data)
-{
-	int index = 0;
-	bubbleSortDist(arraySize);
-	g_print ("\nClosest to Furthest\n");
-	while(index < arraySize)
-	{
-		g_print (" %s %s %.2f miles \n", gasStations[index]->stationName, 
-		gasStations[index]->stationAddress, gasStations[index]->dist);
-		index++;
-	}
-}
 
-static void print_example2 (GtkWidget *widget, gpointer   data)
-{
-	int index = 0;
-	bubbleSortPrice(arraySize);
-	g_print ("\nLowest Cost to Highest\n");
-	while(index < arraySize)
-	{
-
-		g_print (" %s %s %.2f \n", gasStations[index]->stationName, 
-		gasStations[index]->stationAddress, gasStations[index]->price);
-		index++;
-	}
-}
 
 static void activate (GtkApplication *app, gpointer user_data)
 {
@@ -158,6 +132,35 @@ static void activate (GtkApplication *app, gpointer user_data)
 
 }
 
+void bubbleSortPrice()
+{
+   int i, j;
+   for( i = 0; i < arraySize-1; i++ )
+   {
+      for( j = 0; j < arraySize - i - 1; j++ )
+      {
+         if(gasStations[j]->price > gasStations[j+1]->price)
+         {
+            swapGasStation(j, j+1);
+         }
+      }
+   }
+}
+
+void bubbleSortDist()
+{
+   int i, j;
+   for( i = 0; i < arraySize-1; i++ )
+   {
+      for( j = 0; j < arraySize - i - 1; j++ )
+      {
+         if(gasStations[j]->dist > gasStations[j+1]->dist)
+         {
+            swapGasStation(j, j+1);
+         }
+      }
+   }
+}
 int countLines(char *fileName)
 {
 	FILE *input;
@@ -177,6 +180,48 @@ int countLines(char *fileName)
 	return (index/4);
 }
 
+void clearMem()
+{
+	int index = 0;
+	for(index; index<arraySize;index++)
+	{
+		clearMemHelper(index);
+	}
+	free(gasStations);	
+}
+
+void clearMemHelper(int index)
+{
+	free(gasStations[index]);
+}
+
+
+static void print_example (GtkWidget *widget, gpointer   data)
+{
+	int index = 0;
+	bubbleSortDist(arraySize);
+	g_print ("\nClosest to Furthest\n");
+	while(index < arraySize)
+	{
+		g_print (" %s %s %.2f miles \n", gasStations[index]->stationName, 
+		gasStations[index]->stationAddress, gasStations[index]->dist);
+		index++;
+	}
+}
+
+static void print_example2 (GtkWidget *widget, gpointer   data)
+{
+	int index = 0;
+	bubbleSortPrice(arraySize);
+	g_print ("\nLowest Cost to Highest\n");
+	while(index < arraySize)
+	{
+
+		g_print (" %s %s %.2f \n", gasStations[index]->stationName, 
+		gasStations[index]->stationAddress, gasStations[index]->price);
+		index++;
+	}
+}
 void storeData(char *fileName)
 {
    int index = 0;
@@ -212,32 +257,3 @@ void swapGasStation(int index1, int index2)
    gasStations[index2] = temp;
 }
 
-void bubbleSortPrice()
-{
-   int i, j;
-   for( i = 0; i < arraySize-1; i++ )
-   {
-      for( j = 0; j < arraySize - i - 1; j++ )
-      {
-         if(gasStations[j]->price > gasStations[j+1]->price)
-         {
-            swapGasStation(j, j+1);
-         }
-      }
-   }
-}
-
-void bubbleSortDist()
-{
-   int i, j;
-   for( i = 0; i < arraySize-1; i++ )
-   {
-      for( j = 0; j < arraySize - i - 1; j++ )
-      {
-         if(gasStations[j]->dist > gasStations[j+1]->dist)
-         {
-            swapGasStation(j, j+1);
-         }
-      }
-   }
-}

@@ -60,6 +60,7 @@ int main( int argc, char *argv[] )
 	int stat;
 	int index = 0;
     char fileName[ 20 ] = "gasStation.txt";
+	
 	arraySize = countLines("gasStation.txt");
 	
 	gasStations = malloc(arraySize * sizeof(gasStationType));
@@ -71,7 +72,8 @@ int main( int argc, char *argv[] )
 	
 	storeData(fileName);
 
-	gas_collector = gtk_application_new ("com.github.LukeDomby", G_APPLICATION_FLAGS_NONE);
+	gas_collector = gtk_application_new ("com.github.LukeDomby",
+				G_APPLICATION_FLAGS_NONE);
 	//should allow me to create a proof of concept
 	g_signal_connect (gas_collector, "activate", G_CALLBACK (activate), NULL);
 	
@@ -121,7 +123,8 @@ static void activate (GtkApplication *app, gpointer user_data)
 
 	button = gtk_button_new_with_label ("Close Gas collector");
 	
-	g_signal_connect_swapped (button, "clicked", G_CALLBACK (gtk_window_destroy), display);
+	g_signal_connect_swapped (button, "clicked", 
+	G_CALLBACK (gtk_window_destroy), display);
 
 	/* Place the Quit button in the grid cell (0, 1), and make it
 	* span 2 columns.
@@ -165,7 +168,7 @@ int countLines(char *fileName)
 {
 	FILE *input;
 	char current;
-	int index = 1,fuck;
+	int index = 1;
 	
 	input = fopen(fileName, "r");
 	
@@ -203,7 +206,7 @@ static void print_example (GtkWidget *widget, gpointer   data)
 	g_print ("\nClosest to Furthest\n");
 	while(index < arraySize)
 	{
-		g_print (" %s %s %.2f miles \n", gasStations[index]->stationName, 
+		g_print (" %i %s, %s, %.2f miles \n", index+1, gasStations[index]->stationName, 
 		gasStations[index]->stationAddress, gasStations[index]->dist);
 		index++;
 	}
@@ -216,8 +219,7 @@ static void print_example2 (GtkWidget *widget, gpointer   data)
 	g_print ("\nLowest Cost to Highest\n");
 	while(index < arraySize)
 	{
-
-		g_print (" %s %s %.2f \n", gasStations[index]->stationName, 
+		g_print (" %i %s, %s, %.2f \n", index+1, gasStations[index]->stationName, 
 		gasStations[index]->stationAddress, gasStations[index]->price);
 		index++;
 	}

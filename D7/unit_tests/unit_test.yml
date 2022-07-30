@@ -1,4 +1,4 @@
-#include <main_Shlok.c>
+
 
 name: C/C++ CI
 
@@ -13,7 +13,7 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    ste ps:
+    steps:
     - uses: actions/checkout@v3
     - name: configure
       run: ./configure
@@ -23,4 +23,4 @@ jobs:
       run: make check
     - name: make distcheck
       run: make distcheck
-      run: gcc Console_IO_Utility.c File_Input_Utility.c ../main_Shlok.c -o test && ./test
+      run: gcc Console_IO_Utility.c File_Input_Utility.c D7/main_Shlok.c -o test && ./test

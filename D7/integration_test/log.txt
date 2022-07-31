@@ -1,0 +1,423 @@
+Testing bubbleSortDist():
+
+gasStations[0]->dist : 3.00
+gasStations[1]->dist : 4.00
+no swap this time
+
+gasStations[1]->dist : 4.00
+gasStations[2]->dist : 4.50
+no swap this time
+
+gasStations[2]->dist : 4.50
+gasStations[3]->dist : 8.50
+no swap this time
+
+gasStations[3]->dist : 8.50
+gasStations[4]->dist : 3.65
+gasStations[3]->dist now is: 3.65
+gasStations[4]->dist now is: 8.50
+
+gasStations[4]->dist : 8.50
+gasStations[5]->dist : 2.65
+gasStations[4]->dist now is: 2.65
+gasStations[5]->dist now is: 8.50
+
+gasStations[5]->dist : 8.50
+gasStations[6]->dist : 1.55
+gasStations[5]->dist now is: 1.55
+gasStations[6]->dist now is: 8.50
+
+gasStations[6]->dist : 8.50
+gasStations[7]->dist : 1.65
+gasStations[6]->dist now is: 1.65
+gasStations[7]->dist now is: 8.50
+
+gasStations[7]->dist : 8.50
+gasStations[8]->dist : 1.45
+gasStations[7]->dist now is: 1.45
+gasStations[8]->dist now is: 8.50
+
+gasStations[8]->dist : 8.50
+gasStations[9]->dist : 1.55
+gasStations[8]->dist now is: 1.55
+gasStations[9]->dist now is: 8.50
+
+gasStations[0]->dist : 3.00
+gasStations[1]->dist : 4.00
+no swap this time
+
+gasStations[1]->dist : 4.00
+gasStations[2]->dist : 4.50
+no swap this time
+
+gasStations[2]->dist : 4.50
+gasStations[3]->dist : 3.65
+gasStations[2]->dist now is: 3.65
+gasStations[3]->dist now is: 4.50
+
+gasStations[3]->dist : 4.50
+gasStations[4]->dist : 2.65
+gasStations[3]->dist now is: 2.65
+gasStations[4]->dist now is: 4.50
+
+gasStations[4]->dist : 4.50
+gasStations[5]->dist : 1.55
+gasStations[4]->dist now is: 1.55
+gasStations[5]->dist now is: 4.50
+
+gasStations[5]->dist : 4.50
+gasStations[6]->dist : 1.65
+gasStations[5]->dist now is: 1.65
+gasStations[6]->dist now is: 4.50
+
+gasStations[6]->dist : 4.50
+gasStations[7]->dist : 1.45
+gasStations[6]->dist now is: 1.45
+gasStations[7]->dist now is: 4.50
+
+gasStations[7]->dist : 4.50
+gasStations[8]->dist : 1.55
+gasStations[7]->dist now is: 1.55
+gasStations[8]->dist now is: 4.50
+
+gasStations[0]->dist : 3.00
+gasStations[1]->dist : 4.00
+no swap this time
+
+gasStations[1]->dist : 4.00
+gasStations[2]->dist : 3.65
+gasStations[1]->dist now is: 3.65
+gasStations[2]->dist now is: 4.00
+
+gasStations[2]->dist : 4.00
+gasStations[3]->dist : 2.65
+gasStations[2]->dist now is: 2.65
+gasStations[3]->dist now is: 4.00
+
+gasStations[3]->dist : 4.00
+gasStations[4]->dist : 1.55
+gasStations[3]->dist now is: 1.55
+gasStations[4]->dist now is: 4.00
+
+gasStations[4]->dist : 4.00
+gasStations[5]->dist : 1.65
+gasStations[4]->dist now is: 1.65
+gasStations[5]->dist now is: 4.00
+
+gasStations[5]->dist : 4.00
+gasStations[6]->dist : 1.45
+gasStations[5]->dist now is: 1.45
+gasStations[6]->dist now is: 4.00
+
+gasStations[6]->dist : 4.00
+gasStations[7]->dist : 1.55
+gasStations[6]->dist now is: 1.55
+gasStations[7]->dist now is: 4.00
+
+gasStations[0]->dist : 3.00
+gasStations[1]->dist : 3.65
+no swap this time
+
+gasStations[1]->dist : 3.65
+gasStations[2]->dist : 2.65
+gasStations[1]->dist now is: 2.65
+gasStations[2]->dist now is: 3.65
+
+gasStations[2]->dist : 3.65
+gasStations[3]->dist : 1.55
+gasStations[2]->dist now is: 1.55
+gasStations[3]->dist now is: 3.65
+
+gasStations[3]->dist : 3.65
+gasStations[4]->dist : 1.65
+gasStations[3]->dist now is: 1.65
+gasStations[4]->dist now is: 3.65
+
+gasStations[4]->dist : 3.65
+gasStations[5]->dist : 1.45
+gasStations[4]->dist now is: 1.45
+gasStations[5]->dist now is: 3.65
+
+gasStations[5]->dist : 3.65
+gasStations[6]->dist : 1.55
+gasStations[5]->dist now is: 1.55
+gasStations[6]->dist now is: 3.65
+
+gasStations[0]->dist : 3.00
+gasStations[1]->dist : 2.65
+gasStations[0]->dist now is: 2.65
+gasStations[1]->dist now is: 3.00
+
+gasStations[1]->dist : 3.00
+gasStations[2]->dist : 1.55
+gasStations[1]->dist now is: 1.55
+gasStations[2]->dist now is: 3.00
+
+gasStations[2]->dist : 3.00
+gasStations[3]->dist : 1.65
+gasStations[2]->dist now is: 1.65
+gasStations[3]->dist now is: 3.00
+
+gasStations[3]->dist : 3.00
+gasStations[4]->dist : 1.45
+gasStations[3]->dist now is: 1.45
+gasStations[4]->dist now is: 3.00
+
+gasStations[4]->dist : 3.00
+gasStations[5]->dist : 1.55
+gasStations[4]->dist now is: 1.55
+gasStations[5]->dist now is: 3.00
+
+gasStations[0]->dist : 2.65
+gasStations[1]->dist : 1.55
+gasStations[0]->dist now is: 1.55
+gasStations[1]->dist now is: 2.65
+
+gasStations[1]->dist : 2.65
+gasStations[2]->dist : 1.65
+gasStations[1]->dist now is: 1.65
+gasStations[2]->dist now is: 2.65
+
+gasStations[2]->dist : 2.65
+gasStations[3]->dist : 1.45
+gasStations[2]->dist now is: 1.45
+gasStations[3]->dist now is: 2.65
+
+gasStations[3]->dist : 2.65
+gasStations[4]->dist : 1.55
+gasStations[3]->dist now is: 1.55
+gasStations[4]->dist now is: 2.65
+
+gasStations[0]->dist : 1.55
+gasStations[1]->dist : 1.65
+no swap this time
+
+gasStations[1]->dist : 1.65
+gasStations[2]->dist : 1.45
+gasStations[1]->dist now is: 1.45
+gasStations[2]->dist now is: 1.65
+
+gasStations[2]->dist : 1.65
+gasStations[3]->dist : 1.55
+gasStations[2]->dist now is: 1.55
+gasStations[3]->dist now is: 1.65
+
+gasStations[0]->dist : 1.55
+gasStations[1]->dist : 1.45
+gasStations[0]->dist now is: 1.45
+gasStations[1]->dist now is: 1.55
+
+gasStations[1]->dist : 1.55
+gasStations[2]->dist : 1.55
+no swap this time
+
+gasStations[0]->dist : 1.45
+gasStations[1]->dist : 1.55
+no swap this time
+
+Testing bubbleSortPrice()
+
+gasStations[0]->price : $4.86
+gasStations[1]->price : $4.62
+gasStations[0]->price now is: $4.62
+gasStations[1]->price now is: $4.86
+
+gasStations[1]->price : $4.86
+gasStations[2]->price : $4.93
+no swap this time
+
+gasStations[2]->price : $4.93
+gasStations[3]->price : $4.76
+gasStations[2]->price now is: $4.76
+gasStations[3]->price now is: $4.93
+
+gasStations[3]->price : $4.93
+gasStations[4]->price : $4.99
+no swap this time
+
+gasStations[4]->price : $4.99
+gasStations[5]->price : $4.80
+gasStations[4]->price now is: $4.80
+gasStations[5]->price now is: $4.99
+
+gasStations[5]->price : $4.99
+gasStations[6]->price : $4.80
+gasStations[5]->price now is: $4.80
+gasStations[6]->price now is: $4.99
+
+gasStations[6]->price : $4.99
+gasStations[7]->price : $4.76
+gasStations[6]->price now is: $4.76
+gasStations[7]->price now is: $4.99
+
+gasStations[7]->price : $4.99
+gasStations[8]->price : $4.76
+gasStations[7]->price now is: $4.76
+gasStations[8]->price now is: $4.99
+
+gasStations[8]->price : $4.99
+gasStations[9]->price : $4.76
+gasStations[8]->price now is: $4.76
+gasStations[9]->price now is: $4.99
+
+gasStations[0]->price : $4.62
+gasStations[1]->price : $4.86
+no swap this time
+
+gasStations[1]->price : $4.86
+gasStations[2]->price : $4.76
+gasStations[1]->price now is: $4.76
+gasStations[2]->price now is: $4.86
+
+gasStations[2]->price : $4.86
+gasStations[3]->price : $4.93
+no swap this time
+
+gasStations[3]->price : $4.93
+gasStations[4]->price : $4.80
+gasStations[3]->price now is: $4.80
+gasStations[4]->price now is: $4.93
+
+gasStations[4]->price : $4.93
+gasStations[5]->price : $4.80
+gasStations[4]->price now is: $4.80
+gasStations[5]->price now is: $4.93
+
+gasStations[5]->price : $4.93
+gasStations[6]->price : $4.76
+gasStations[5]->price now is: $4.76
+gasStations[6]->price now is: $4.93
+
+gasStations[6]->price : $4.93
+gasStations[7]->price : $4.76
+gasStations[6]->price now is: $4.76
+gasStations[7]->price now is: $4.93
+
+gasStations[7]->price : $4.93
+gasStations[8]->price : $4.76
+gasStations[7]->price now is: $4.76
+gasStations[8]->price now is: $4.93
+
+gasStations[0]->price : $4.62
+gasStations[1]->price : $4.76
+no swap this time
+
+gasStations[1]->price : $4.76
+gasStations[2]->price : $4.86
+no swap this time
+
+gasStations[2]->price : $4.86
+gasStations[3]->price : $4.80
+gasStations[2]->price now is: $4.80
+gasStations[3]->price now is: $4.86
+
+gasStations[3]->price : $4.86
+gasStations[4]->price : $4.80
+gasStations[3]->price now is: $4.80
+gasStations[4]->price now is: $4.86
+
+gasStations[4]->price : $4.86
+gasStations[5]->price : $4.76
+gasStations[4]->price now is: $4.76
+gasStations[5]->price now is: $4.86
+
+gasStations[5]->price : $4.86
+gasStations[6]->price : $4.76
+gasStations[5]->price now is: $4.76
+gasStations[6]->price now is: $4.86
+
+gasStations[6]->price : $4.86
+gasStations[7]->price : $4.76
+gasStations[6]->price now is: $4.76
+gasStations[7]->price now is: $4.86
+
+gasStations[0]->price : $4.62
+gasStations[1]->price : $4.76
+no swap this time
+
+gasStations[1]->price : $4.76
+gasStations[2]->price : $4.80
+no swap this time
+
+gasStations[2]->price : $4.80
+gasStations[3]->price : $4.80
+no swap this time
+
+gasStations[3]->price : $4.80
+gasStations[4]->price : $4.76
+gasStations[3]->price now is: $4.76
+gasStations[4]->price now is: $4.80
+
+gasStations[4]->price : $4.80
+gasStations[5]->price : $4.76
+gasStations[4]->price now is: $4.76
+gasStations[5]->price now is: $4.80
+
+gasStations[5]->price : $4.80
+gasStations[6]->price : $4.76
+gasStations[5]->price now is: $4.76
+gasStations[6]->price now is: $4.80
+
+gasStations[0]->price : $4.62
+gasStations[1]->price : $4.76
+no swap this time
+
+gasStations[1]->price : $4.76
+gasStations[2]->price : $4.80
+no swap this time
+
+gasStations[2]->price : $4.80
+gasStations[3]->price : $4.76
+gasStations[2]->price now is: $4.76
+gasStations[3]->price now is: $4.80
+
+gasStations[3]->price : $4.80
+gasStations[4]->price : $4.76
+gasStations[3]->price now is: $4.76
+gasStations[4]->price now is: $4.80
+
+gasStations[4]->price : $4.80
+gasStations[5]->price : $4.76
+gasStations[4]->price now is: $4.76
+gasStations[5]->price now is: $4.80
+
+gasStations[0]->price : $4.62
+gasStations[1]->price : $4.76
+no swap this time
+
+gasStations[1]->price : $4.76
+gasStations[2]->price : $4.76
+no swap this time
+
+gasStations[2]->price : $4.76
+gasStations[3]->price : $4.76
+no swap this time
+
+gasStations[3]->price : $4.76
+gasStations[4]->price : $4.76
+no swap this time
+
+gasStations[0]->price : $4.62
+gasStations[1]->price : $4.76
+no swap this time
+
+gasStations[1]->price : $4.76
+gasStations[2]->price : $4.76
+no swap this time
+
+gasStations[2]->price : $4.76
+gasStations[3]->price : $4.76
+no swap this time
+
+gasStations[0]->price : $4.62
+gasStations[1]->price : $4.76
+no swap this time
+
+gasStations[1]->price : $4.76
+gasStations[2]->price : $4.76
+no swap this time
+
+gasStations[0]->price : $4.62
+gasStations[1]->price : $4.76
+no swap this time
+

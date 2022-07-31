@@ -1,0 +1,20 @@
+CC = gcc
+DEBUG = -g
+CFLAGS = -Wall -c $(DEBUG)
+LFLAGS = -Wall $(DEBUG)
+
+integrate_test : File_Input_Utility.o Console_IO_Utility.o integrate_test.o
+	$(CC) $(LFLAGS) File_Input_Utility.o Console_IO_Utility.o integrate_test.o -o integrate_test
+
+integrate_test.o : integrate_test.c File_Input_Utility.h Console_IO_Utility.h
+	$(CC) $(CFLAGS) integrate_test.c
+
+Console_IO_Utility.o : Console_IO_Utility.c Console_IO_Utility.h
+	$(CC) $(CFLAGS) Console_IO_Utility.c
+
+File_Input_Utility.o : File_Input_Utility.c File_Input_Utility.h
+	$(CC) $(CFLAGS) File_Input_Utility.c
+
+clean:
+	\rm *.o integrate_test
+

@@ -215,6 +215,8 @@ gasStations[0]->dist : 1.45
 gasStations[1]->dist : 1.55
 no swap this time
 
+
+
 Testing bubbleSortPrice()
 
 gasStations[0]->price : $4.86
@@ -420,4 +422,6 @@ no swap this time
 gasStations[0]->price : $4.62
 gasStations[1]->price : $4.76
 no swap this time
+
+
 

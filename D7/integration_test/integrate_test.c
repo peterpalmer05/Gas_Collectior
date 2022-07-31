@@ -145,6 +145,8 @@ void bubbleSortPrice()
          }
       }
    }
+   //debug code
+   printf("\n\n");
 }
 
 void bubbleSortDist()
@@ -170,4 +172,6 @@ void bubbleSortDist()
          }
       }
    }
+   //debug code
+   printf("\n\n");
 }
